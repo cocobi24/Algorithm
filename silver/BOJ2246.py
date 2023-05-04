@@ -2,12 +2,12 @@
 
 N = int(input())
 condo_list = sorted([list(map(int ,input().split())) for _ in range(N)])
-cost = 10001
-result = 0
+cost = 99999
 answer = 0
-for i in condo_list:
-    temp = i[1]
-    if temp < cost:
+
+for condo in condo_list :
+    temp = condo[1]
+    if temp < cost :
         cost = temp
         answer += 1
 print(answer)
