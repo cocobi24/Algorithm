@@ -3,6 +3,7 @@
 import sys
 from collections import Counter
 word = sorted(list(input()))
+count = Counter(word)
 
 odd, mid, answer = 0, '', ''
 for i in count:
