@@ -3,26 +3,14 @@
 import sys
 input = sys.stdin.readline
 n = int(input())
-answers = []
-answer = ''
+files = [list(input().rstrip()) for _ in range(n)]
 
-for i in range(n) :
-    str = list(input().rstrip())
-    answers.append(str)
-
-l = len(answers[0])
-for j in range(l) :
-    temp = {}
-    s = ''
-    for i in range(n) :
-        s = answers[i][j]
-        if s not in temp :
-            temp[s] = 1
-        else :
-            temp[s] += 1
-    if len(temp) == 1 :
-        answer += s
-    else :
-        answer += '?'
-
-print(answer)
+l = len(files[0])
+for i in range(l):
+  check = True
+  temp = files[0][i]
+  for j in range(n):
+    if temp != files[j][i]:
+      check = False
+      break
+  print(temp if check else '?', end='')
