@@ -10,15 +10,12 @@ for i in range(x):
   if 'X' not in castle_row[i]:
     cnt_row += 1
 
-castle_col = []
-for i in range(y):
-  castle_col.append('')
-  for j in range(x):
-    castle_col[i] += castle_row[j][i]
-
 cnt_col = 0
 for i in range(y):
-  if 'X' not in castle_col[i]:
+  col = ''
+  for j in range(x):
+    col += castle_row[j][i]
+  if 'X' not in col:
     cnt_col += 1
 
 print(max(cnt_row, cnt_col))
