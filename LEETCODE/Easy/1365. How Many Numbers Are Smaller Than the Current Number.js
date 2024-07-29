@@ -1,4 +1,5 @@
-let nums = [7,7,7,7]
+// https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current-number/description/
+
 /**
  * @param {number[]} nums
  * @return {number[]}
@@ -20,6 +21,3 @@ let smallerNumbersThanCurrent = function(nums) {
 
     return ans
 };
-
-let a = smallerNumbersThanCurrent(nums)
-console.log(a)
